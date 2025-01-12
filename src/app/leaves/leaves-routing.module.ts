@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ApplyComponent } from './apply/apply.component';
 import { LeavesComponent } from './leaves.component';
 import { Page404leavesComponent } from './page404leaves/page404leaves.component';
+import { HolidayComponent } from './holiday/holiday.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: 'apply',
         component: ApplyComponent,
+      },
+      {
+        path: 'holiday',
+        component: HolidayComponent,
       },
       {
         path: 'balance',
