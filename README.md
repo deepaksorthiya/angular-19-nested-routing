@@ -12,7 +12,26 @@ ng serve
 
 ## Command Used to generate project
 
-```bash
+```
+
+ng generate component dashboard --skip-tests
+ng generate component profile --skip-tests
+ng generate component page404 --skip-tests
+ng generate component attendance --skip-tests
+ng generate component work --skip-tests
+
+
+ng generate module leaves --routing
+ng generate component leaves --standalone false -m leaves --skip-tests
+ng generate component leaves/apply --standalone false -m leaves --skip-tests
+ng generate component leaves/holiday --standalone false -m leaves --skip-tests
+ng generate component leaves/page404leaves --standalone false -m leaves --skip-tests
+
+ng generate module leaves/balance --routing
+ng generate component leaves/balance --standalone false -m balance --skip-tests
+ng generate component leaves/balance/casual --standalone false -m balance --skip-tests
+ng generate component leaves/balance/earned --standalone false -m balance --skip-tests
+ng generate component leaves/balance/page404balance --standalone false -m balance --skip-tests
 
 ```
 
