@@ -1,42 +1,39 @@
-<div class="card">
-  <div class="card-body">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" routerLink="/dashboard" routerLinkActive="active">
-        Dashboard
-      </a>
-
-      <a class="navbar-brand" routerLink="/profile" routerLinkActive="active">
-        My Profile
-      </a>
-      <a class="navbar-brand" routerLink="/work" routerLinkActive="active">
-        My Work
-      </a>
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark"
+  *ngIf="this.authService.isAuthenticatedUser()"
+>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/profile">My Profile</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/work">My Work</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/attendance">My Attendance</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/not-found">Not Found</a>
+    </li>
+    <li class="nav-item">
       <a
-        class="navbar-brand"
-        routerLink="/attendance"
-        routerLinkActive="active"
-      >
-        My Attendance
-      </a>
-      <a
-        class="navbar-brand"
-        routerLink="/not-found"
-        routerLinkActive="active"
-      >
-        Not Found
-      </a>
-      <a
-        class="navbar-brand"
+        class="nav-link"
         href="https://www.freakyjolly.com/angular-nested-routing-with-multiple-routeroutlet-using-loadchildren-having-own-router-modules-example-application/"
         target="_blank"
         >Tutorial</a
       >
-      <a class="navbar-brand" routerLink="/leaves" routerLinkActive="active">
-        My leaves
-      </a>
-    </nav>
-    <p class="card-text">
-      <router-outlet></router-outlet>
-    </p>
-  </div>
-</div>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/leaves">My leaves</a>
+    </li>
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <button class="btn btn-outline-secondary my-2 my-sm-0" (click)="logout()">
+      Logout
+    </button>
+  </form>
+</nav>
+<router-outlet></router-outlet>
