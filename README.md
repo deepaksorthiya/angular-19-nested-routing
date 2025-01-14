@@ -1,5 +1,11 @@
 # Angular19NestedRouting
 
+---
+
+### ** Angular 19 nested routing with auth guards example **
+
+---
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
 
 ## Development server
@@ -19,6 +25,7 @@ ng generate component profile --skip-tests
 ng generate component page404 --skip-tests
 ng generate component attendance --skip-tests
 ng generate component work --skip-tests
+ng generate component login --skip-tests
 
 
 ng generate module leaves --routing
@@ -33,9 +40,20 @@ ng generate component leaves/balance/casual --standalone false -m balance --skip
 ng generate component leaves/balance/earned --standalone false -m balance --skip-tests
 ng generate component leaves/balance/page404balance --standalone false -m balance --skip-tests
 
+ng generate service services/auth --skip-tests
+ng generate service services/authguard --skip-tests
+
+ng generate guard guards/auth --skip-tests
+
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+### Deploy to GitHub Pages
+
+```bash
+ng deploy --base-href=/angular-19-nested-routing/
+```
 
 ## Code scaffolding
 

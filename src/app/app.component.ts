@@ -20,7 +20,7 @@ export class AppComponent {
   constructor(
     authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {
     this.authService = authService;
     console.log('AppComponent constructor initialized.');
@@ -29,14 +29,14 @@ export class AppComponent {
   logout(): void {
     this.authService.logout();
     // go to previous page
-    const currentUrl = this.router.url;
-    const returnUrl =
-      this.route.snapshot.queryParams['returnUrl'] ||
-      this.router.url ||
-      'dashboard';
-    this.router.navigateByUrl(returnUrl).then((r) => {
-      console.log(r);
-    });
+    // const currentUrl = this.router.url;
+    // const returnUrl =
+    //   this.route.snapshot.queryParams['returnUrl'] ||
+    //   this.router.url ||
+    //   'dashboard';
+    // this.router.navigateByUrl(returnUrl).then((r) => {
+    //   console.log(r);
+    // });
   }
 
   showLogin(): boolean {
