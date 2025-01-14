@@ -1,0 +1,1 @@
+import{Ca as n,Qa as o,Ra as a,Za as p}from"./chunk-7KWF5R5E.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-page404"]],decls:2,vars:0,template:function(e,m){e&1&&(o(0,"p"),p(1,"page404 works!"),a())},encapsulation:2})};export{i as Page404Component};
