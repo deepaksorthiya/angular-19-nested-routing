@@ -1,1 +1,0 @@
-import{Da as n,Ra as a,Sa as o,_a as c}from"./chunk-PTNFA2DM.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-attendance"]],decls:2,vars:0,template:function(e,s){e&1&&(a(0,"p"),c(1,"attendance works!"),o())},encapsulation:2})};export{p as AttendanceComponent};

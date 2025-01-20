@@ -1,1 +1,0 @@
-import{Da as t,Ra as n,Sa as r,_a as p}from"./chunk-PTNFA2DM.js";var a=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-work"]],decls:2,vars:0,template:function(e,s){e&1&&(n(0,"p"),p(1,"work works!"),r())},encapsulation:2})};export{a as WorkComponent};

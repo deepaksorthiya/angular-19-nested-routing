@@ -1,1 +1,0 @@
-import{Da as t,Ra as a,Sa as n,_a as s}from"./chunk-PTNFA2DM.js";var r=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-dashboard"]],decls:2,vars:0,template:function(e,d){e&1&&(a(0,"p"),s(1,"dashboard works!"),n())},encapsulation:2})};export{r as DashboardComponent};
