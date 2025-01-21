@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {
   ActivatedRoute,
   Router,
@@ -15,15 +15,21 @@ import { AuthService } from './services/auth.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   authService: AuthService;
   constructor(
     authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {
     this.authService = authService;
     console.log('AppComponent constructor initialized.');
+  }
+  ngOnInit(): void {
+    console.log('AppComponent ngOnInit() initialized.');
+  }
+  ngOnDestroy(): void {
+    console.log('AppComponent ngOnDestroy() initialized.');
   }
 
   logout(): void {

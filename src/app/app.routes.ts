@@ -42,6 +42,14 @@ export const routes: Routes = [
     canActivateChild: [authGuard],
   },
   {
+    path: 'destroy-check',
+    loadComponent: () =>
+      import('./destroy-check/destroy-check.component').then(
+        (mod) => mod.DestroyCheckComponent
+      ),
+    canActivate: [authGuard],
+  },
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',

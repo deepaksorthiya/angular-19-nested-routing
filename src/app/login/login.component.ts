@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
@@ -10,7 +10,7 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit, OnDestroy {
   loginForm?: any;
   showLoginError = false;
   constructor(
@@ -18,13 +18,20 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    console.log('LoginComponent constructor initialized.');
+  }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       username: ['admin', Validators.required],
       password: ['admin', Validators.required],
     });
+    console.log('LoginComponent ngOnInit() initialized.');
+  }
+
+  ngOnDestroy(): void {
+    console.log('LoginComponent ngOnDestroy() initialized.');
   }
 
   login(): void {
