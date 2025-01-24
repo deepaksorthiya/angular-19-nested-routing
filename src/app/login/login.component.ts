@@ -48,9 +48,9 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.router.url ||
           'dashboard';
         console.log('Login Success and Redirecting to: ' + returnUrl);
-        this.router.navigateByUrl(returnUrl).then((r) => {
+        this.router.navigateByUrl("/dashboard")/*.then((r) => {
           console.log('Redirecting to url ' + returnUrl + ' Success ' + r);
-        });
+        })*/;
       } else {
         // Handle authentication error (show error message, etc.)
         console.log('Invalid username or password');

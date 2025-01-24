@@ -75,6 +75,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   logout(): void {
     this.authService.logout();
+    this.router.navigateByUrl("/login")
     // go to previous page
     // const currentUrl = this.router.url;
     // const returnUrl =

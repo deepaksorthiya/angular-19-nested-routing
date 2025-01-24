@@ -24,9 +24,7 @@ export class AuthguardService {
       console.log(
         'Not logged in, Saving Current URL as Redirect URL: ' + state.url
       );
-      this.router.navigate(['/login'], {
-        queryParams: { returnUrl: state.url },
-      });
+      this.router.navigateByUrl("/login").then(value => true);
       return false;
     }
   }
