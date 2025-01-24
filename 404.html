@@ -1,14 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-beasties-container>
-<head>
-  <meta charset="utf-8">
-  <title>Angular 19 Nested Routing With Guards</title>
-  <base href="/angular-19-nested-routing/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles-5INURTSO.css"></head>
-<body>
-  <app-root>Loading..........</app-root>
-<link rel="modulepreload" href="chunk-HX6U3RJQ.js"><link rel="modulepreload" href="chunk-MGYWVSFW.js"><link rel="modulepreload" href="chunk-QVYBJCA2.js"><link rel="modulepreload" href="chunk-FK4PHBHV.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-QWT63OKY.js" type="module"></script></body>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular 19 Nested Routing With Guards</title>
+    <base href="/angular-19-nested-routing/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style type="text/css">
+      .global-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .global-loader-fade-out {
+        opacity: 0;
+      }
+
+      .global-loader-hidden {
+        display: none;
+      }
+
+      .global-loader h1 {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 1.5rem;
+        letter-spacing: 0.04rem;
+        white-space: pre;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: repeating-linear-gradient(
+          to right,
+          #f44336,
+          #9c27b0,
+          #3f51b5,
+          #03a9f4,
+          #009688,
+          #8bc34a,
+          #ffeb3b,
+          #ff9800
+        );
+        background-size: 750% auto;
+        background-position: 0 100%;
+        animation: gradient 20s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0 0;
+        }
+
+        100% {
+          background-position: -750% 0;
+        }
+      }
+    </style>
+  <link rel="stylesheet" href="styles-5INURTSO.css"></head>
+  <body>
+    <app-root></app-root>
+    <div id="globalLoader" class="global-loader">
+      <h1>LOADING</h1>
+    </div>
+  <link rel="modulepreload" href="chunk-62LCTMYV.js"><link rel="modulepreload" href="chunk-MP7PEG5O.js"><link rel="modulepreload" href="chunk-7XYPSVJM.js"><link rel="modulepreload" href="chunk-64Z5EGJ7.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-HPATN4JM.js" type="module"></script></body>
 </html>
